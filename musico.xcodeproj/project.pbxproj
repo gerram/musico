@@ -10,6 +10,16 @@
 		5E31EA621E17A1C300186DBB /* GERRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E31EA611E17A1C300186DBB /* GERRequests.m */; };
 		5E31EA651E17C24400186DBB /* GERSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E31EA641E17C24400186DBB /* GERSearchViewController.m */; };
 		5E3C5A641E1A108100298CDA /* GERStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A631E1A108100298CDA /* GERStorageManager.m */; };
+		5E3C5A751E1B9C2600298CDA /* Collection+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A661E1B9C2600298CDA /* Collection+CoreDataClass.m */; };
+		5E3C5A761E1B9C2600298CDA /* Collection+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A681E1B9C2600298CDA /* Collection+CoreDataProperties.m */; };
+		5E3C5A771E1B9C2600298CDA /* Genre+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A6A1E1B9C2600298CDA /* Genre+CoreDataClass.m */; };
+		5E3C5A781E1B9C2600298CDA /* Genre+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A6C1E1B9C2600298CDA /* Genre+CoreDataProperties.m */; };
+		5E3C5A791E1B9C2600298CDA /* Track+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A6E1E1B9C2600298CDA /* Track+CoreDataClass.m */; };
+		5E3C5A7A1E1B9C2600298CDA /* Track+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A701E1B9C2600298CDA /* Track+CoreDataProperties.m */; };
+		5E3C5A7B1E1B9C2600298CDA /* Artist+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A721E1B9C2600298CDA /* Artist+CoreDataClass.m */; };
+		5E3C5A7C1E1B9C2600298CDA /* Artist+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A741E1B9C2600298CDA /* Artist+CoreDataProperties.m */; };
+		5E3C5A831E1CA6D900298CDA /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A821E1CA6D900298CDA /* NSString+MD5.m */; };
+		5E3C5A8C1E1CC7A200298CDA /* GERResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A8B1E1CC7A200298CDA /* GERResultsTableViewCell.m */; };
 		5E4387211E19048400346B55 /* GERDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4387201E19048400346B55 /* GERDetailViewController.m */; };
 		5E4387251E192C6E00346B55 /* disco_cover_gray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E4387241E192C6E00346B55 /* disco_cover_gray.jpg */; };
 		5E59FADA1E17442B0067FE13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FAD91E17442B0067FE13 /* main.m */; };
@@ -48,6 +58,26 @@
 		5E31EA641E17C24400186DBB /* GERSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GERSearchViewController.m; sourceTree = "<group>"; };
 		5E3C5A621E1A108000298CDA /* GERStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GERStorageManager.h; sourceTree = "<group>"; };
 		5E3C5A631E1A108100298CDA /* GERStorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GERStorageManager.m; sourceTree = "<group>"; };
+		5E3C5A651E1B9C2600298CDA /* Collection+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Collection+CoreDataClass.h"; sourceTree = "<group>"; };
+		5E3C5A661E1B9C2600298CDA /* Collection+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Collection+CoreDataClass.m"; sourceTree = "<group>"; };
+		5E3C5A671E1B9C2600298CDA /* Collection+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Collection+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5E3C5A681E1B9C2600298CDA /* Collection+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Collection+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5E3C5A691E1B9C2600298CDA /* Genre+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Genre+CoreDataClass.h"; sourceTree = "<group>"; };
+		5E3C5A6A1E1B9C2600298CDA /* Genre+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Genre+CoreDataClass.m"; sourceTree = "<group>"; };
+		5E3C5A6B1E1B9C2600298CDA /* Genre+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Genre+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5E3C5A6C1E1B9C2600298CDA /* Genre+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Genre+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5E3C5A6D1E1B9C2600298CDA /* Track+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+CoreDataClass.h"; sourceTree = "<group>"; };
+		5E3C5A6E1E1B9C2600298CDA /* Track+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+CoreDataClass.m"; sourceTree = "<group>"; };
+		5E3C5A6F1E1B9C2600298CDA /* Track+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5E3C5A701E1B9C2600298CDA /* Track+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5E3C5A711E1B9C2600298CDA /* Artist+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Artist+CoreDataClass.h"; sourceTree = "<group>"; };
+		5E3C5A721E1B9C2600298CDA /* Artist+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Artist+CoreDataClass.m"; sourceTree = "<group>"; };
+		5E3C5A731E1B9C2600298CDA /* Artist+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Artist+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5E3C5A741E1B9C2600298CDA /* Artist+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Artist+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5E3C5A811E1CA6D900298CDA /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		5E3C5A821E1CA6D900298CDA /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		5E3C5A8A1E1CC7A200298CDA /* GERResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GERResultsTableViewCell.h; sourceTree = "<group>"; };
+		5E3C5A8B1E1CC7A200298CDA /* GERResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GERResultsTableViewCell.m; sourceTree = "<group>"; };
 		5E43871F1E19048400346B55 /* GERDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GERDetailViewController.h; sourceTree = "<group>"; };
 		5E4387201E19048400346B55 /* GERDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GERDetailViewController.m; sourceTree = "<group>"; };
 		5E4387241E192C6E00346B55 /* disco_cover_gray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = disco_cover_gray.jpg; sourceTree = "<group>"; };
@@ -99,9 +129,114 @@
 		5E31EA5F1E17477600186DBB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5E3C5A7F1E1B9C5D00298CDA /* Track */,
+				5E3C5A801E1B9C6B00298CDA /* Artist */,
+				5E3C5A7E1E1B9C4C00298CDA /* Genre */,
+				5E3C5A7D1E1B9C3300298CDA /* Collection */,
 				5E59FAE41E17442B0067FE13 /* musico.xcdatamodeld */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		5E3C5A7D1E1B9C3300298CDA /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				5E3C5A671E1B9C2600298CDA /* Collection+CoreDataProperties.h */,
+				5E3C5A681E1B9C2600298CDA /* Collection+CoreDataProperties.m */,
+				5E3C5A651E1B9C2600298CDA /* Collection+CoreDataClass.h */,
+				5E3C5A661E1B9C2600298CDA /* Collection+CoreDataClass.m */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		5E3C5A7E1E1B9C4C00298CDA /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				5E3C5A6B1E1B9C2600298CDA /* Genre+CoreDataProperties.h */,
+				5E3C5A6C1E1B9C2600298CDA /* Genre+CoreDataProperties.m */,
+				5E3C5A691E1B9C2600298CDA /* Genre+CoreDataClass.h */,
+				5E3C5A6A1E1B9C2600298CDA /* Genre+CoreDataClass.m */,
+			);
+			name = Genre;
+			sourceTree = "<group>";
+		};
+		5E3C5A7F1E1B9C5D00298CDA /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				5E3C5A6F1E1B9C2600298CDA /* Track+CoreDataProperties.h */,
+				5E3C5A701E1B9C2600298CDA /* Track+CoreDataProperties.m */,
+				5E3C5A6D1E1B9C2600298CDA /* Track+CoreDataClass.h */,
+				5E3C5A6E1E1B9C2600298CDA /* Track+CoreDataClass.m */,
+			);
+			name = Track;
+			sourceTree = "<group>";
+		};
+		5E3C5A801E1B9C6B00298CDA /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				5E3C5A731E1B9C2600298CDA /* Artist+CoreDataProperties.h */,
+				5E3C5A741E1B9C2600298CDA /* Artist+CoreDataProperties.m */,
+				5E3C5A711E1B9C2600298CDA /* Artist+CoreDataClass.h */,
+				5E3C5A721E1B9C2600298CDA /* Artist+CoreDataClass.m */,
+			);
+			name = Artist;
+			sourceTree = "<group>";
+		};
+		5E3C5A841E1CC6A400298CDA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5E31EA601E17A1C300186DBB /* GERRequests.h */,
+				5E31EA611E17A1C300186DBB /* GERRequests.m */,
+				5E3C5A621E1A108000298CDA /* GERStorageManager.h */,
+				5E3C5A631E1A108100298CDA /* GERStorageManager.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5E3C5A851E1CC6C000298CDA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5E3C5A811E1CA6D900298CDA /* NSString+MD5.h */,
+				5E3C5A821E1CA6D900298CDA /* NSString+MD5.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		5E3C5A861E1CC6E100298CDA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E3C5A871E1CC6F400298CDA /* Search */,
+				5E3C5A881E1CC71300298CDA /* SearchDetail */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5E3C5A871E1CC6F400298CDA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5E3C5A891E1CC74C00298CDA /* Cells */,
+				5E31EA631E17C24400186DBB /* GERSearchViewController.h */,
+				5E31EA641E17C24400186DBB /* GERSearchViewController.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		5E3C5A881E1CC71300298CDA /* SearchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5E43871F1E19048400346B55 /* GERDetailViewController.h */,
+				5E4387201E19048400346B55 /* GERDetailViewController.m */,
+			);
+			name = SearchDetail;
+			sourceTree = "<group>";
+		};
+		5E3C5A891E1CC74C00298CDA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5E3C5A8A1E1CC7A200298CDA /* GERResultsTableViewCell.h */,
+				5E3C5A8B1E1CC7A200298CDA /* GERResultsTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		5E59FACC1E17442B0067FE13 = {
@@ -129,23 +264,18 @@
 		5E59FAD71E17442B0067FE13 /* musico */ = {
 			isa = PBXGroup;
 			children = (
-				5E4387241E192C6E00346B55 /* disco_cover_gray.jpg */,
+				5E3C5A861E1CC6E100298CDA /* Controllers */,
+				5E3C5A851E1CC6C000298CDA /* Utils */,
+				5E3C5A841E1CC6A400298CDA /* Services */,
 				5E31EA5F1E17477600186DBB /* CoreData */,
 				5E59FADB1E17442B0067FE13 /* AppDelegate.h */,
 				5E59FADC1E17442B0067FE13 /* AppDelegate.m */,
-				5E31EA631E17C24400186DBB /* GERSearchViewController.h */,
-				5E31EA641E17C24400186DBB /* GERSearchViewController.m */,
-				5E43871F1E19048400346B55 /* GERDetailViewController.h */,
-				5E4387201E19048400346B55 /* GERDetailViewController.m */,
 				5E59FAE11E17442B0067FE13 /* Main.storyboard */,
 				5E59FAE71E17442B0067FE13 /* Assets.xcassets */,
 				5E59FAE91E17442B0067FE13 /* LaunchScreen.storyboard */,
 				5E59FAEC1E17442B0067FE13 /* Info.plist */,
+				5E4387241E192C6E00346B55 /* disco_cover_gray.jpg */,
 				5E59FAD81E17442B0067FE13 /* Supporting Files */,
-				5E31EA601E17A1C300186DBB /* GERRequests.h */,
-				5E31EA611E17A1C300186DBB /* GERRequests.m */,
-				5E3C5A621E1A108000298CDA /* GERStorageManager.h */,
-				5E3C5A631E1A108100298CDA /* GERStorageManager.m */,
 			);
 			path = musico;
 			sourceTree = "<group>";
@@ -382,12 +512,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E4387211E19048400346B55 /* GERDetailViewController.m in Sources */,
+				5E3C5A781E1B9C2600298CDA /* Genre+CoreDataProperties.m in Sources */,
+				5E3C5A831E1CA6D900298CDA /* NSString+MD5.m in Sources */,
 				5E59FADD1E17442B0067FE13 /* AppDelegate.m in Sources */,
 				5E59FADA1E17442B0067FE13 /* main.m in Sources */,
 				5E31EA651E17C24400186DBB /* GERSearchViewController.m in Sources */,
 				5E31EA621E17A1C300186DBB /* GERRequests.m in Sources */,
+				5E3C5A751E1B9C2600298CDA /* Collection+CoreDataClass.m in Sources */,
 				5E3C5A641E1A108100298CDA /* GERStorageManager.m in Sources */,
+				5E3C5A7B1E1B9C2600298CDA /* Artist+CoreDataClass.m in Sources */,
+				5E3C5A761E1B9C2600298CDA /* Collection+CoreDataProperties.m in Sources */,
+				5E3C5A7A1E1B9C2600298CDA /* Track+CoreDataProperties.m in Sources */,
+				5E3C5A791E1B9C2600298CDA /* Track+CoreDataClass.m in Sources */,
 				5E59FAE61E17442B0067FE13 /* musico.xcdatamodeld in Sources */,
+				5E3C5A7C1E1B9C2600298CDA /* Artist+CoreDataProperties.m in Sources */,
+				5E3C5A8C1E1CC7A200298CDA /* GERResultsTableViewCell.m in Sources */,
+				5E3C5A771E1B9C2600298CDA /* Genre+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

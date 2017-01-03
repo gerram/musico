@@ -5,7 +5,7 @@
         <attribute name="artist_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artist_view_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="index" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
-        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Track" inverseName="artists" inverseEntity="Track" syncable="YES"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Track" inverseName="artist" inverseEntity="Track" syncable="YES"/>
     </entity>
     <entity name="Collection" representedClassName="Collection" syncable="YES">
         <attribute name="collection_id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
@@ -22,6 +22,7 @@
     </entity>
     <entity name="Track" representedClassName="Track" syncable="YES">
         <attribute name="artwork_100_uiimage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="artwork_key" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <attribute name="artwork_url_100" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="index" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
         <attribute name="release_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -31,7 +32,7 @@
         <attribute name="track_preview_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="track_time" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="track_view_url" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="artists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Artist" inverseName="tracks" inverseEntity="Artist" syncable="YES"/>
+        <relationship name="artist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Artist" inverseName="tracks" inverseEntity="Artist" syncable="YES"/>
         <relationship name="collection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Collection" inverseName="tracks" inverseEntity="Collection" syncable="YES"/>
         <relationship name="primary_genre" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Genre" inverseName="tracks" inverseEntity="Genre" syncable="YES"/>
     </entity>
@@ -39,6 +40,6 @@
         <element name="Artist" positionX="-54" positionY="-9" width="128" height="120"/>
         <element name="Collection" positionX="-36" positionY="9" width="128" height="135"/>
         <element name="Genre" positionX="-18" positionY="90" width="128" height="90"/>
-        <element name="Track" positionX="-63" positionY="-18" width="128" height="240"/>
+        <element name="Track" positionX="-63" positionY="-18" width="128" height="255"/>
     </elements>
 </model>

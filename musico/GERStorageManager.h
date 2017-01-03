@@ -12,6 +12,7 @@
 @interface GERStorageManager : NSObject
 
 @property (strong) NSManagedObjectContext *mainManagedObjectContext;
+@property (strong) NSManagedObjectContext *privateManagedObjectContext;
 
 + (instancetype)sharedManager;
 

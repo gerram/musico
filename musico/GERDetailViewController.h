@@ -10,4 +10,6 @@
 
 @interface GERDetailViewController : UIViewController
 
+@property (nonatomic, strong) NSNumber *trackID;
+
 @end

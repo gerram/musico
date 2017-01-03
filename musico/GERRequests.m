@@ -89,6 +89,7 @@
 
 #pragma mark - Common
 + (void)downloadFileForURLString:(NSString *)destinationString
+                    saveWithName:(NSString *)saveName
                         progress:(ProgressBlock)progress
                completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completion
 {
@@ -108,7 +109,11 @@
         } destination:^NSURL* (NSURL *targetPath, NSURLResponse *response) {
             NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
             
-            return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+            if (saveName.length)
+            {
+                return [documentsDirectoryURL URLByAppendingPathComponent:saveName];
+            }
+            return [documentsDirectoryURL URLByAppendingPathComponent:[NSString stringWithFormat:@"%u_%@", arc4random(), [response suggestedFilename]]];
         } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
             if (completion)
             {

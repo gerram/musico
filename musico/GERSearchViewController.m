@@ -7,7 +7,12 @@
 //
 
 #import "GERSearchViewController.h"
+#import "GERResultsTableViewCell.h"
+#import "GERDetailViewController.h"
 #import "GERRequests.h"
+#import "Track+CoreDataClass.h"
+#import "GERStorageManager.h"
+#import <MBProgressHUD.h>
 
 
 typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
@@ -21,33 +26,21 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITableView *previousSearchesTableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *previousTVHeightConstraint;
+
 @property (nonatomic, strong) GERRequests *apiClient;
 @property (nonatomic, strong) NSArray *previousSearchesItems;
 @property (nonatomic, strong) NSArray *resultsItems;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *previousTVHeightConstraint;
 
 @end
 
 @implementation GERSearchViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     _apiClient = [[GERRequests alloc] initWithHost:@"https://itunes.apple.com/"];
     
-    [_apiClient getTracksForUbiquity:@"john+lennon"
-                             success:^(id responseData) {
-                                 
-                             }
-                             failure:^(NSError *error) {
-                                 //
-                             }];
-    
-    _previousSearchesItems = @[@"john lennon", @"ласковый май"];
-    _resultsItems = @[@111, @1234, @23423, @234, @234234];
-    
     _previousTVHeightConstraint.constant = 0.0;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,14 +57,17 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
 
 - (void)previousSearchesState:(BOOL)state
 {
+    //TODO: Make checking for stop scrolling (problem in Dim realisation)
+    
     [self.view layoutIfNeeded];
     
-    if (state)
+    if (state && self.previousSearchesItems.count)
     {
         self.previousTVHeightConstraint.constant = 160.0;
+        [self.previousSearchesTableView setContentOffset:CGPointZero animated:YES];
         
         // Dim
-        UIView *dimView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height)];
+        UIView *dimView = [[UIView alloc] initWithFrame:CGRectMake(0, self.tableView.bounds.origin.y, self.tableView.bounds.size.width, self.tableView.bounds.size.height)];
         dimView.tag = 1111;
         dimView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
         [self.tableView addSubview:dimView];
@@ -92,7 +88,7 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
         self.tableView.scrollEnabled = YES;
     }
     
-    [UIView animateWithDuration:.5 animations:^{
+    [UIView animateWithDuration:.3 animations:^{
         [self.view layoutIfNeeded];
     }];
 }
@@ -120,7 +116,7 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
         return 34.0;
     }
     
-    return 44.0;
+    return 60.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,15 +124,14 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
     if (tableView.tag == SearchControllerResultsTableTag)
     {
         static NSString *cellIdentifier = @"ResultCell";
+        GERResultsTableViewCell *cell = (GERResultsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-        
+        [cell setupFromEntityID:self.resultsItems[indexPath.row]];
         return cell;
     }
     else if (tableView.tag == SearchControllerPreviousSearchesTableTag)
     {
         static NSString *previosSearchesCellIdentifier = @"PreviousSearchesCell";
-        
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:previosSearchesCellIdentifier forIndexPath:indexPath];
         cell.textLabel.text = self.previousSearchesItems[indexPath.row];
         
@@ -163,6 +158,16 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
         self.searchBar.text = [self.previousSearchesItems[indexPath.row] copy];
         [tableView cellForRowAtIndexPath:indexPath].selected = NO;
     }
+    else if (tableView.tag == SearchControllerResultsTableTag)
+    {
+        [self performSegueWithIdentifier:@"SearchToDetail" sender:self.resultsItems[indexPath.row]];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    GERDetailViewController *destinationVC = [segue destinationViewController];
+    destinationVC.trackID = (NSNumber *)sender;
 }
 
 
@@ -207,6 +212,8 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
         }
     }
     
+    [self.tableView setContentOffset:CGPointZero animated:YES];
+    
     searchBar.text = nil;
     [searchBar resignFirstResponder];
 }
@@ -221,8 +228,10 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
 
 - (void)searchOnITunes:(NSString *)searchString
 {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSError *error;
+        NSError *error = nil;
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@" +"
                                                                                options:NSRegularExpressionCaseInsensitive error:&error];
         NSString *serializedString = [regex stringByReplacingMatchesInString:searchString options:0 range:NSMakeRange(0, searchString.length) withTemplate:@"+"];
@@ -231,20 +240,55 @@ typedef NS_ENUM(NSUInteger, SearchControllerTableTags)
                                      success:^(NSDictionary *responseData) {
                                          
                                          dispatch_async(dispatch_get_main_queue(), ^{
-                                             //
+                                             
+                                             __block NSMutableArray *newResultsIndexes = [[NSMutableArray alloc] init];
+                                             
+                                             //NSNumber *resultCount = responseData[@"resultCount"];
+                                             NSArray *results = responseData[@"results"];
+                                             
+                                             [[GERStorageManager sharedManager].privateManagedObjectContext performBlock:^{
+                                                 
+                                                 // Private context
+                                                 for (NSDictionary *trackObject in results)
+                                                 {
+                                                     NSNumber *trackID = trackObject[@"trackId"];
+                                                     
+                                                     [newResultsIndexes addObject:trackID]; // for New ResultsTable
+                                                     
+                                                     Track *track = [Track findOrCreateEntityWithID:trackID inContext:[GERStorageManager sharedManager].privateManagedObjectContext];
+                                                     [track loadFromDictionary:trackObject];
+                                                 }
+                                                 
+                                                 NSError *error = nil;
+                                                 if (![[GERStorageManager sharedManager].privateManagedObjectContext save:&error])
+                                                 {
+                                                     NSLog(@"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+                                                     abort();
+                                                 }
+                                                 
+                                                 // MainContex
+                                                 [[GERStorageManager sharedManager].mainManagedObjectContext performBlockAndWait:^{
+                                                     NSError *error = nil;
+                                                     if (![[GERStorageManager sharedManager].mainManagedObjectContext save:&error]) {
+                                                         NSLog(@"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+                                                         abort();
+                                                     }
+                                                 }];
+                                                 
+                                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                                     self.resultsItems = newResultsIndexes;
+                                                     [hud hideAnimated:YES];
+                                                     [self.tableView reloadData];
+                                                 });
+                                                 
+                                             }];
+                                             
                                          });
                                          
                                      } failure:^(NSError *error) {
                                          //
                                      }];
     });
-}
-
-
-- (IBAction)doNext:(id)sender {
-    
-    
-    [self performSegueWithIdentifier:@"SearchToDetail" sender:sender];
 }
 
 @end

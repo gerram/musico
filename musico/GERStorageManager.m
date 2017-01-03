@@ -44,6 +44,10 @@
     [moc setPersistentStoreCoordinator:psc];
     [self setMainManagedObjectContext:moc];
     
+    NSManagedObjectContext *privateMoc = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    [privateMoc setParentContext:moc];
+    [self setPrivateManagedObjectContext:privateMoc];
+    
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *documentsURL = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     NSURL *storeURL = [documentsURL URLByAppendingPathComponent:@"musico.sqlite"];
@@ -64,9 +68,9 @@
 
 - (void)saveContext
 {
-    NSManagedObjectContext *context = self.mainManagedObjectContext;
+    NSManagedObjectContext *mainContext = self.mainManagedObjectContext;
     NSError *error = nil;
-    if ([context hasChanges] && ![context save:&error]) {
+    if ([mainContext hasChanges] && ![mainContext save:&error]) {
         // Replace this implementation with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);

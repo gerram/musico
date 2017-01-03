@@ -26,6 +26,7 @@ typedef void (^ProgressBlock)(NSProgress *progress);
 
 #pragma mark - Common
 + (void)downloadFileForURLString:(NSString *)destinationString
+                    saveWithName:(NSString *)saveName
                         progress:(ProgressBlock)progress
                completionHandler:(void(^)(NSURLResponse *response, NSURL *filePath, NSError *error))completion;
 
