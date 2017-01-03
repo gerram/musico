@@ -1,0 +1,8 @@
+*.xcbkptlist
+*.xcscheme
+.DS_Store
+*.pbxuser
+xcuserdata/
+Pods
+*.xccheckout
+*~

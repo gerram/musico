@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E31EA621E17A1C300186DBB /* GERRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E31EA611E17A1C300186DBB /* GERRequests.m */; };
+		5E31EA651E17C24400186DBB /* GERSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E31EA641E17C24400186DBB /* GERSearchViewController.m */; };
+		5E3C5A641E1A108100298CDA /* GERStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3C5A631E1A108100298CDA /* GERStorageManager.m */; };
+		5E4387211E19048400346B55 /* GERDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4387201E19048400346B55 /* GERDetailViewController.m */; };
+		5E4387251E192C6E00346B55 /* disco_cover_gray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E4387241E192C6E00346B55 /* disco_cover_gray.jpg */; };
+		5E59FADA1E17442B0067FE13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FAD91E17442B0067FE13 /* main.m */; };
+		5E59FADD1E17442B0067FE13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FADC1E17442B0067FE13 /* AppDelegate.m */; };
+		5E59FAE31E17442B0067FE13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E59FAE11E17442B0067FE13 /* Main.storyboard */; };
+		5E59FAE61E17442B0067FE13 /* musico.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FAE41E17442B0067FE13 /* musico.xcdatamodeld */; };
+		5E59FAE81E17442B0067FE13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E59FAE71E17442B0067FE13 /* Assets.xcassets */; };
+		5E59FAEB1E17442B0067FE13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E59FAE91E17442B0067FE13 /* LaunchScreen.storyboard */; };
+		5E59FAF61E17442B0067FE13 /* musicoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FAF51E17442B0067FE13 /* musicoTests.m */; };
+		5E59FB011E17442B0067FE13 /* musicoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E59FB001E17442B0067FE13 /* musicoUITests.m */; };
+		B9178144A2D21FE9217420F4 /* libPods-musico.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D420A1B5B3A680002696F277 /* libPods-musico.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E59FAF21E17442B0067FE13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E59FACD1E17442B0067FE13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E59FAD41E17442B0067FE13;
+			remoteInfo = musico;
+		};
+		5E59FAFD1E17442B0067FE13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E59FACD1E17442B0067FE13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E59FAD41E17442B0067FE13;
+			remoteInfo = musico;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47296C4AFE5A0DCB675C56A1 /* Pods-musico.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musico.debug.xcconfig"; path = "Pods/Target Support Files/Pods-musico/Pods-musico.debug.xcconfig"; sourceTree = "<group>"; };
+		5E31EA601E17A1C300186DBB /* GERRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GERRequests.h; sourceTree = "<group>"; };
+		5E31EA611E17A1C300186DBB /* GERRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GERRequests.m; sourceTree = "<group>"; };
+		5E31EA631E17C24400186DBB /* GERSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GERSearchViewController.h; sourceTree = "<group>"; };
+		5E31EA641E17C24400186DBB /* GERSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GERSearchViewController.m; sourceTree = "<group>"; };
+		5E3C5A621E1A108000298CDA /* GERStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GERStorageManager.h; sourceTree = "<group>"; };
+		5E3C5A631E1A108100298CDA /* GERStorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GERStorageManager.m; sourceTree = "<group>"; };
+		5E43871F1E19048400346B55 /* GERDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GERDetailViewController.h; sourceTree = "<group>"; };
+		5E4387201E19048400346B55 /* GERDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GERDetailViewController.m; sourceTree = "<group>"; };
+		5E4387241E192C6E00346B55 /* disco_cover_gray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = disco_cover_gray.jpg; sourceTree = "<group>"; };
+		5E59FAD51E17442B0067FE13 /* musico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musico.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E59FAD91E17442B0067FE13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E59FADB1E17442B0067FE13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5E59FADC1E17442B0067FE13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5E59FAE21E17442B0067FE13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E59FAE51E17442B0067FE13 /* musico.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = musico.xcdatamodel; sourceTree = "<group>"; };
+		5E59FAE71E17442B0067FE13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E59FAEA1E17442B0067FE13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E59FAEC1E17442B0067FE13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E59FAF11E17442B0067FE13 /* musicoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E59FAF51E17442B0067FE13 /* musicoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = musicoTests.m; sourceTree = "<group>"; };
+		5E59FAF71E17442B0067FE13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E59FAFC1E17442B0067FE13 /* musicoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = musicoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E59FB001E17442B0067FE13 /* musicoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = musicoUITests.m; sourceTree = "<group>"; };
+		5E59FB021E17442B0067FE13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D420A1B5B3A680002696F277 /* libPods-musico.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-musico.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA5A0A3B72D64BD39A7B316 /* Pods-musico.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musico.release.xcconfig"; path = "Pods/Target Support Files/Pods-musico/Pods-musico.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E59FAD21E17442B0067FE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9178144A2D21FE9217420F4 /* libPods-musico.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E59FAEE1E17442B0067FE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E59FAF91E17442B0067FE13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E31EA5F1E17477600186DBB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5E59FAE41E17442B0067FE13 /* musico.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		5E59FACC1E17442B0067FE13 = {
+			isa = PBXGroup;
+			children = (
+				5E59FAD71E17442B0067FE13 /* musico */,
+				5E59FAF41E17442B0067FE13 /* musicoTests */,
+				5E59FAFF1E17442B0067FE13 /* musicoUITests */,
+				5E59FAD61E17442B0067FE13 /* Products */,
+				F340CF5FD0CD20B8DE5DC4B5 /* Pods */,
+				CE9594B4429C80C9AB1DC012 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5E59FAD61E17442B0067FE13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E59FAD51E17442B0067FE13 /* musico.app */,
+				5E59FAF11E17442B0067FE13 /* musicoTests.xctest */,
+				5E59FAFC1E17442B0067FE13 /* musicoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E59FAD71E17442B0067FE13 /* musico */ = {
+			isa = PBXGroup;
+			children = (
+				5E4387241E192C6E00346B55 /* disco_cover_gray.jpg */,
+				5E31EA5F1E17477600186DBB /* CoreData */,
+				5E59FADB1E17442B0067FE13 /* AppDelegate.h */,
+				5E59FADC1E17442B0067FE13 /* AppDelegate.m */,
+				5E31EA631E17C24400186DBB /* GERSearchViewController.h */,
+				5E31EA641E17C24400186DBB /* GERSearchViewController.m */,
+				5E43871F1E19048400346B55 /* GERDetailViewController.h */,
+				5E4387201E19048400346B55 /* GERDetailViewController.m */,
+				5E59FAE11E17442B0067FE13 /* Main.storyboard */,
+				5E59FAE71E17442B0067FE13 /* Assets.xcassets */,
+				5E59FAE91E17442B0067FE13 /* LaunchScreen.storyboard */,
+				5E59FAEC1E17442B0067FE13 /* Info.plist */,
+				5E59FAD81E17442B0067FE13 /* Supporting Files */,
+				5E31EA601E17A1C300186DBB /* GERRequests.h */,
+				5E31EA611E17A1C300186DBB /* GERRequests.m */,
+				5E3C5A621E1A108000298CDA /* GERStorageManager.h */,
+				5E3C5A631E1A108100298CDA /* GERStorageManager.m */,
+			);
+			path = musico;
+			sourceTree = "<group>";
+		};
+		5E59FAD81E17442B0067FE13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E59FAD91E17442B0067FE13 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E59FAF41E17442B0067FE13 /* musicoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E59FAF51E17442B0067FE13 /* musicoTests.m */,
+				5E59FAF71E17442B0067FE13 /* Info.plist */,
+			);
+			path = musicoTests;
+			sourceTree = "<group>";
+		};
+		5E59FAFF1E17442B0067FE13 /* musicoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5E59FB001E17442B0067FE13 /* musicoUITests.m */,
+				5E59FB021E17442B0067FE13 /* Info.plist */,
+			);
+			path = musicoUITests;
+			sourceTree = "<group>";
+		};
+		CE9594B4429C80C9AB1DC012 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D420A1B5B3A680002696F277 /* libPods-musico.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F340CF5FD0CD20B8DE5DC4B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47296C4AFE5A0DCB675C56A1 /* Pods-musico.debug.xcconfig */,
+				DEA5A0A3B72D64BD39A7B316 /* Pods-musico.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E59FAD41E17442B0067FE13 /* musico */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E59FB051E17442B0067FE13 /* Build configuration list for PBXNativeTarget "musico" */;
+			buildPhases = (
+				63136E21A5DCC509FD08D5C5 /* [CP] Check Pods Manifest.lock */,
+				5E59FAD11E17442B0067FE13 /* Sources */,
+				5E59FAD21E17442B0067FE13 /* Frameworks */,
+				5E59FAD31E17442B0067FE13 /* Resources */,
+				B0BD342FB955949D6E3EDD36 /* [CP] Embed Pods Frameworks */,
+				E202DC82DF27FFBBBC0C4AE8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = musico;
+			productName = musico;
+			productReference = 5E59FAD51E17442B0067FE13 /* musico.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E59FAF01E17442B0067FE13 /* musicoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E59FB081E17442B0067FE13 /* Build configuration list for PBXNativeTarget "musicoTests" */;
+			buildPhases = (
+				5E59FAED1E17442B0067FE13 /* Sources */,
+				5E59FAEE1E17442B0067FE13 /* Frameworks */,
+				5E59FAEF1E17442B0067FE13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E59FAF31E17442B0067FE13 /* PBXTargetDependency */,
+			);
+			name = musicoTests;
+			productName = musicoTests;
+			productReference = 5E59FAF11E17442B0067FE13 /* musicoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5E59FAFB1E17442B0067FE13 /* musicoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E59FB0B1E17442B0067FE13 /* Build configuration list for PBXNativeTarget "musicoUITests" */;
+			buildPhases = (
+				5E59FAF81E17442B0067FE13 /* Sources */,
+				5E59FAF91E17442B0067FE13 /* Frameworks */,
+				5E59FAFA1E17442B0067FE13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E59FAFE1E17442B0067FE13 /* PBXTargetDependency */,
+			);
+			name = musicoUITests;
+			productName = musicoUITests;
+			productReference = 5E59FAFC1E17442B0067FE13 /* musicoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E59FACD1E17442B0067FE13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "George Malushkin";
+				TargetAttributes = {
+					5E59FAD41E17442B0067FE13 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VJY97M8X99;
+						ProvisioningStyle = Automatic;
+					};
+					5E59FAF01E17442B0067FE13 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VJY97M8X99;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5E59FAD41E17442B0067FE13;
+					};
+					5E59FAFB1E17442B0067FE13 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VJY97M8X99;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5E59FAD41E17442B0067FE13;
+					};
+				};
+			};
+			buildConfigurationList = 5E59FAD01E17442B0067FE13 /* Build configuration list for PBXProject "musico" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E59FACC1E17442B0067FE13;
+			productRefGroup = 5E59FAD61E17442B0067FE13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E59FAD41E17442B0067FE13 /* musico */,
+				5E59FAF01E17442B0067FE13 /* musicoTests */,
+				5E59FAFB1E17442B0067FE13 /* musicoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E59FAD31E17442B0067FE13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E59FAEB1E17442B0067FE13 /* LaunchScreen.storyboard in Resources */,
+				5E4387251E192C6E00346B55 /* disco_cover_gray.jpg in Resources */,
+				5E59FAE81E17442B0067FE13 /* Assets.xcassets in Resources */,
+				5E59FAE31E17442B0067FE13 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E59FAEF1E17442B0067FE13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E59FAFA1E17442B0067FE13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63136E21A5DCC509FD08D5C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0BD342FB955949D6E3EDD36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-musico/Pods-musico-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E202DC82DF27FFBBBC0C4AE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-musico/Pods-musico-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E59FAD11E17442B0067FE13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E4387211E19048400346B55 /* GERDetailViewController.m in Sources */,
+				5E59FADD1E17442B0067FE13 /* AppDelegate.m in Sources */,
+				5E59FADA1E17442B0067FE13 /* main.m in Sources */,
+				5E31EA651E17C24400186DBB /* GERSearchViewController.m in Sources */,
+				5E31EA621E17A1C300186DBB /* GERRequests.m in Sources */,
+				5E3C5A641E1A108100298CDA /* GERStorageManager.m in Sources */,
+				5E59FAE61E17442B0067FE13 /* musico.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E59FAED1E17442B0067FE13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E59FAF61E17442B0067FE13 /* musicoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E59FAF81E17442B0067FE13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E59FB011E17442B0067FE13 /* musicoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E59FAF31E17442B0067FE13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E59FAD41E17442B0067FE13 /* musico */;
+			targetProxy = 5E59FAF21E17442B0067FE13 /* PBXContainerItemProxy */;
+		};
+		5E59FAFE1E17442B0067FE13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E59FAD41E17442B0067FE13 /* musico */;
+			targetProxy = 5E59FAFD1E17442B0067FE13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E59FAE11E17442B0067FE13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E59FAE21E17442B0067FE13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E59FAE91E17442B0067FE13 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E59FAEA1E17442B0067FE13 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E59FB031E17442B0067FE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5E59FB041E17442B0067FE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E59FB061E17442B0067FE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47296C4AFE5A0DCB675C56A1 /* Pods-musico.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VJY97M8X99;
+				INFOPLIST_FILE = musico/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemalushkin.musico;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5E59FB071E17442B0067FE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEA5A0A3B72D64BD39A7B316 /* Pods-musico.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VJY97M8X99;
+				INFOPLIST_FILE = musico/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemalushkin.musico;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5E59FB091E17442B0067FE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VJY97M8X99;
+				INFOPLIST_FILE = musicoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemalushkin.musicoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/musico.app/musico";
+			};
+			name = Debug;
+		};
+		5E59FB0A1E17442B0067FE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VJY97M8X99;
+				INFOPLIST_FILE = musicoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemalushkin.musicoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/musico.app/musico";
+			};
+			name = Release;
+		};
+		5E59FB0C1E17442B0067FE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VJY97M8X99;
+				INFOPLIST_FILE = musicoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemalushkin.musicoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = musico;
+			};
+			name = Debug;
+		};
+		5E59FB0D1E17442B0067FE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VJY97M8X99;
+				INFOPLIST_FILE = musicoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgemalushkin.musicoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = musico;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E59FAD01E17442B0067FE13 /* Build configuration list for PBXProject "musico" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E59FB031E17442B0067FE13 /* Debug */,
+				5E59FB041E17442B0067FE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E59FB051E17442B0067FE13 /* Build configuration list for PBXNativeTarget "musico" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E59FB061E17442B0067FE13 /* Debug */,
+				5E59FB071E17442B0067FE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E59FB081E17442B0067FE13 /* Build configuration list for PBXNativeTarget "musicoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E59FB091E17442B0067FE13 /* Debug */,
+				5E59FB0A1E17442B0067FE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E59FB0B1E17442B0067FE13 /* Build configuration list for PBXNativeTarget "musicoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E59FB0C1E17442B0067FE13 /* Debug */,
+				5E59FB0D1E17442B0067FE13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5E59FAE41E17442B0067FE13 /* musico.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5E59FAE51E17442B0067FE13 /* musico.xcdatamodel */,
+			);
+			currentVersion = 5E59FAE51E17442B0067FE13 /* musico.xcdatamodel */;
+			path = musico.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5E59FACD1E17442B0067FE13 /* Project object */;
+}
