@@ -3,6 +3,6 @@
 .DS_Store
 *.pbxuser
 xcuserdata/
-Pods
+#Pods
 *.xccheckout
 *~
